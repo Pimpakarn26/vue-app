@@ -1,0 +1,29 @@
+version: '3.5'
+
+services:
+  testlink:
+    container_name: testlink
+    image: 0xsauel/testlink:1.9.20
+    ports:
+      - 80:80
+    networks:
+      - internal
+    volumes:
+      - testlink-data:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10
+    environment:
+      - MYSQL_DATABASE=testlink
+      - MYSQL_ROOT_PASSWORD=password
+    networks:
+      - internal
+
+volumes:
+  testlink-data:
+
+networks:
+  internal:
+    driver: bridge
