@@ -24,8 +24,8 @@ jobs:
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: githubaction  # ไม่ต้องใส่ Pimpakarn26 ซ้ำ
-          registry: ghcr.io/pimpakarn26
+          image: vue-app  # ไม่ต้องใส่ Pimpakarn26 ซ้ำ
+          registry: ghcr.io/Pimpakarn26
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           tags: ${{ env.TAG_NAME }}, latest
