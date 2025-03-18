@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o,a as _}from"./index-6b5e8c6c.js";const s={},n={class:"about"},c=_("h1",null,"Sofeware Engineering",-1),a=[c];function r(i,d){return t(),o("div",n,a)}const u=e(s,[["render",r]]);export{u as default};
